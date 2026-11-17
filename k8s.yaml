@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: gaeun13/order-multiagent 
+        image: gaeun13/order-multiagent:5846cfc1d6b823b0f7c0185b0f26fe25d9fd1b05
         imagePullPolicy: Always
 
         ports:
