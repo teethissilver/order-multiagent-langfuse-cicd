@@ -59,7 +59,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: yklee2002/order-multiagent:${{ github.sha }}
+          tags: gaeun13/order-multiagent:${{ github.sha }}
 
       - name: Update Kubernetes image tag
         env:
@@ -72,9 +72,9 @@ jobs:
 
           path = Path("k8s.yaml")
           content = path.read_text(encoding="utf-8")
-          image = "yklee2002/order-multiagent:" + os.environ["IMAGE_TAG"]
+          image = "gaeun13/order-multiagent:" + os.environ["IMAGE_TAG"]
 
-          pattern = r"(?m)^(\s*image:\s*)yklee2002/order-multiagent(?::[^\s]+)?\s*$"
+          pattern = r"(?m)^(\s*image:\s*)gaeun13/order-multiagent(?::[^\s]+)?\s*$"
           updated, count = re.subn(
               pattern,
               lambda m: m.group(1) + image,
